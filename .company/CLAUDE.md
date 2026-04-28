@@ -19,11 +19,28 @@
 ```
 .company/
 ├── CLAUDE.md
-└── secretary/
-    ├── CLAUDE.md
-    ├── inbox/
-    ├── todos/
-    └── notes/
+├── secretary/
+│   ├── CLAUDE.md
+│   ├── inbox/
+│   ├── todos/
+│   └── notes/
+├── strategy/
+│   ├── from-hq.md          ← hqからの戦略
+│   ├── our-strategy.md     ← 独自戦略
+│   └── kpis.md            ← KPI管理
+├── finance/
+│   ├── pl-template.md      ← P&Lテンプレート
+│   └── YYYY-MM-pl.md       ← 月次P&L
+├── reports/
+│   ├── monthly/            ← 月次報告（hqへ提出）
+│   └── weekly/             ← 週次進捗
+├── direct-orders/
+│   ├── inbox/              ← hqからの直接指示受領
+│   └── done/               ← 完了した指示
+└── operations/
+    ├── product/            ← コンテンツ制作
+    ├── marketing/          ← 配信・プロモーション
+    └── sales/              ← マネタイズ施策
 ```
 
 ## 部署一覧
@@ -31,6 +48,11 @@
 | 部署 | フォルダ | 役割 |
 |------|---------|------|
 | 秘書室 | secretary | 窓口・相談役。TODO管理、壁打ち、メモ。常設。 |
+| 戦略部 | strategy | hqからの戦略受領、独自戦略策定、KPI管理 |
+| 財務部 | finance | P&L管理、財務報告 |
+| 報告部 | reports | hqへの月次・週次報告作成 |
+| 直接指示 | direct-orders | hqからの緊急・個別指示の受領と処理 |
+| オペレーション | operations | 日常の事業活動（コンテンツ・配信・マネタイズ） |
 
 ## 運営ルール
 
@@ -44,6 +66,24 @@
 - 秘書は定期的に hq の directives フォルダをチェックする
 - 新しい指示があれば、自動的に todos に追加する
 - 完了後は hq の reports フォルダに報告する
+
+### hq からの直接指示
+- hq からの緊急指示は `direct-orders/inbox/` に届く
+- 秘書は inbox を定期的にチェックし、todos に変換する
+- 完了後は `direct-orders/done/` に移動する
+
+### 自律経営
+- pulse-tech は独立採算制の子会社として自律的に経営する
+- `strategy/our-strategy.md` で独自戦略を策定できる
+- `strategy/kpis.md` で独自KPIを設定・管理する
+- `finance/YYYY-MM-pl.md` で月次P&Lを管理する
+- `reports/monthly/` でhqへ月次報告を提出する
+
+### 財務管理
+- 毎月末に月次P&Lを作成する
+- P&Lテンプレートは `finance/pl-template.md` を使用する
+- 重要指標（PV、UU、CPM、購読収益）を常に把握する
+- 月次報告時にP&LをhqのP&Lフォルダにもコピーする
 
 ### 自動記録
 - 意思決定、学び、アイデアは言われなくても記録する
@@ -77,3 +117,20 @@
 pulse-tech社は、グローバルAIトレンドを日本語で発信するテックメディアです。
 海外テック情報のスキャン自動化、高品質な要約・考察記事の生成を通じて、まずは無料公開でトラフィックと信頼を獲得します。
 フェーズ1の成功が、グループ全体の収益化へのステップとなります。
+
+## 重要KPI
+
+### Content Economics
+- **Cost per Article**: 目標 <$50
+- **Revenue per Article**: 目標 >$100
+- **Pageview to Subscriber Conversion**: 目標 >1%
+
+### Ad Monetization
+- **RPM (Revenue per 1000 views)**: 目標 >$10
+- **Fill Rate**: 目標 >90%
+
+### Subscription Metrics
+- **Subscriber Growth Rate**: 目標 >15% MoM
+- **Subscription Revenue Mix**: 目標 >60% (広告依存を減らす)
+
+これらの数字を通じて、グローバルメディア企業の経営を実践的に学びます。
